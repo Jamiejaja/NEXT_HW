@@ -4,7 +4,7 @@ import csv
 file = open('movie.csv', mode='w', newline='')
 
 writer = csv.writer(file)
-writer.writerow(["title","img_src"])
+writer.writerow(["title","img_src","score","genre"])
 MOVIE_URL ='https://movie.naver.com/movie/running/current.nhn'
 movie_html = requests.get(MOVIE_URL)
 
@@ -16,19 +16,14 @@ final_result = []
 for movie in movie_list:
     title = movie.find("dt", {"class" : "tit"}).find("a").text
     img_src = movie.find("div", {"class" : "thumb"}).find("img")['src']
-    score = movie.find("div", {"class" : "star_t1"}).find("span").text
-    director = movie.find("dl", {"class" : "info_txt1"}).find("dt").text
-    actor = movie.find("dl", {"class" : "info_txt1"}).find("dd")[2].text
-    date = movie.find("dl", {"class" : "info_txt1"}).find("dd")[0].text
-    print(date.replace('\r','').replace('\t','').replace('\n',''))
+    score = movie.find("div", {"class":"star_t1"}).find("span", {"class":"num"}).text
+    genre = movie.find("span", {"class":"link_txt"}).find("a").text
 
     movie_info = {
     'title' : title,
     'img_src' : img_src,
     'score' : score,
-    'director' : director,
-    'actor' : actor,
-    'date' : date
+    'genre' : genre
     }
     final_result.append(movie_info)
 
@@ -37,6 +32,6 @@ for result in final_result:
     row.append(result['title'])
     row.append(result['img_src'])
     row.append(result['score'])
-    row.append(result['director'])
+    row.append(result['genre'])
     writer.writerow(row)
 print(final_result)

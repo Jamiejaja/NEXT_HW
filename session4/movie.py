@@ -17,10 +17,10 @@ final_result = []
 for movie in movie_list:
     title = movie_soup.find('dt',{'class': 'tit'}).find('a').text
     image = movie_soup.select('div.thumb > a> img')[0]['src']
-
+    
 for result in final_result:
     row = []
     row.append(result['title'])
-    row.append(result['image'])
+    row.append(result['img_src'])
     writer.writerow(row)
 print(final_result)
