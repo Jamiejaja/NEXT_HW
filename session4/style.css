@@ -1,0 +1,254 @@
+#whole {
+    margin-left: 200px;
+    width: 350px;
+    height: 1000px;
+    background-color: rgb(218, 221, 225);
+    border: 0.5px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topper1 {
+    width: 350px;
+    height: 40px;
+    background-color: rgb(59, 89, 152);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+}
+
+.box p {
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 8px;
+    padding: 0;
+}
+
+.box {
+    width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 3px;
+    margin: 0;
+}
+
+.topper2 {
+    width: 350px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+}
+
+.topper2 i {
+    color: rgb(102, 109, 118);
+}
+
+.topper3 {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bla {
+    width: 270px;
+    font-size: 13px;
+    border: 0.5px solid lightgrey;
+    border-radius: 40px;
+    margin: 0;
+    padding: 6px;
+}
+
+.topper31 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topper31 p {
+    margin: 1px;
+    font-size: 10px;
+   
+}
+
+.story {
+    margin-top: 5px;
+    width: 350px;
+    height: 170px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story1 p {
+    font-size: 10px;
+    padding-left: 3px;
+}
+
+.story1 {
+    width: 350px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.story11 p {
+    padding: 3px;
+}
+
+.story2 {
+    width: 350px;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.a1 {
+    width: 80px;
+    height: 130px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.b1 {
+    width: 80px;
+    height: 130px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.c1 {
+    width: 80px;
+    height: 130px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.d1 {
+    width: 80px;
+    height: 130px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.article1 {
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title1 img {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.title2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title2 p {
+    margin: 0px;
+    font-size: 7px;
+    padding-left: 5px;
+}
+
+.content {
+    width: 350px;
+    height: 30px;
+    font-size: 10px;
+}
+
+.content p {
+    margin: 0px;
+}
+
+.content img {
+    margin-top: 8px;
+    width: 350px;
+    height: 200px;
+}
+
+.footer1 {
+    width: 350px;
+    height: 50px;
+    background-color: rgb(232, 234, 238);
+    font-size: 10px;
+    padding: 2px;
+    margin: 0px;
+    border-bottom: 0.3px solid gray;
+}
+
+.footer2 p {
+    font-size: 8px;
+    color: grey;
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.s {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+
+.s p {padding: 4px;}

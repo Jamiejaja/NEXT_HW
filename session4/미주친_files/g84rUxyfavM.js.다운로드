@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["OOyoker"]); }
+
+__d("MNTLogEventActionHandler",["MarauderLogger"],(function(a,b,c,d,e,f){f.performAction=a;function a(a){b("MarauderLogger").log(a.event,a.module,a.extra)}}),null);
