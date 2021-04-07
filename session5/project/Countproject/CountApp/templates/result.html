@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+</head>
+<body>
+<div class="a">  
+    <p><b>입력 내용 =  {{origin}}</b></p>
+    <p><b>전체 글자 수 = {{total_len}}</b></p>
+    <p><b>공백 제외 글자 수 = {{blank}}</b></p>
+    <p><b>전체 단어 수 = {{words}}</b></p>
+</div>
+
+<style>
+.a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: pink;
+    font-size: 32px;
+    font-family:fantasy;
+    width: 1000px;
+    height: 1000px;
+    margin: 500px;
+}
+</style>
+</body>
+</html>

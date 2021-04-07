@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: pink;">
+    <div style="margin: 1000px;" style="display: flex;" style="flex-direction: column;" style="justify-content: space-evenly;" style="align-items: center;">
+        <h1 style="margin-left: 30px;" style="color:white">내용을 작성해 주세요</h1>
+        <form action="{% url 'result' %}" method="post">{% csrf_token %}
+        <textarea name="text" id="" cols="50" rows="20"></textarea>
+        <br>
+        <br>
+        <input style="width: 380px;" style="height: 5px;" style="font-family: 'Times New Roman', Times, serif;" type="submit" value="Submit">
+    </div>
+    </form>
+</body>
+</html>
