@@ -1,0 +1,27 @@
+
+    {% extends 'base.html' %}
+    {% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    {% endblock %}
+
+    {% block title %}
+    <h1>TO DO</h1>
+    {% endblock title %}
+
+    {% block content %}
+    </div>
+    <div class="list">
+        <ul>
+            {% for post in posts %}
+            <li class="item">
+                <p id="date">Until: {{ post.date }}</p>
+                <a class="content" href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="add">
+    <a id="add_button" href="{% url 'new' %}">ADD +</a>
+    </div>
+    {% endblock content %}

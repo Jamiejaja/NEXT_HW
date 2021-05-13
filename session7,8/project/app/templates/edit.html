@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'base.html' %}
+    {% block css %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <title></title>
-</head>
+    {% endblock %}
 
-<body>
-    <div class="head">
-        <h1>EDIT</h1>
-    </div>
+    {% block title %}
+    <h1>EDIT</h1>
+    {% endblock title %}
+
+    {% block content %}
     <div class="all">
         <form action="" method="POST">
             {% csrf_token %}
@@ -34,13 +26,8 @@
                     <label for="date">Date</label>
                     <input type="date" id="date" name="date" value="{{ post.date }}">
                 </div>
-            </div>
-            <div class="box">
                 <button type="submit">EDIT</button>
             </div>
         </form>
     </div>
-
-</body>
-
-</html>
+    {% endblock content %}

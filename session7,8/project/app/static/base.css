@@ -1,0 +1,8 @@
+#nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: darkblue;
+    border: 1px, solid, black;
+}
