@@ -18,11 +18,15 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
+  path('registration/signup', views.signup, name="signup"),
+    path('registration/login', views.login, name="login"),
+    path('registration/logout', views.logout, name="logout"),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', views.home, name="home"),
     path('new/', views.new, name="new"),
     path('detail/<int:post_pk>', views.detail, name="detail"),
     path('edit/<int:post_pk>', views.edit, name="edit"),
     path('delete/<int:post_pk>', views.delete, name="delete"),
-    path('delete_comment/<int:post_pk>/<int:comment_pk>', views.delete_comment, name='delete_comment'),
+    path('delete_comment/<int:post_pk>/<int:comment_pk>', views.delete_comment, name="delete_comment")
 ]
