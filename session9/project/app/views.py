@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import Post,Comment
+from .models import Post, Comment
 from django.contrib.auth.models import User
-from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+from django.contrib import auth
+from datetime import date
+import datetime
 
 # Create your views here.
 def home(request):
@@ -101,3 +103,10 @@ def new(request):
         )
         return redirect('detail', new_post.pk)
     return render(request, 'new.html')
+
+@login_required(login_url='/registration/login')
+def mypage(request):
+    posts = Post.objects.filter(author=request.user)
+    comments = Comment.objects.filter(author=request.user)
+
+    return render(request, 'mypage.html', {'posts':posts, 'comments':comments})

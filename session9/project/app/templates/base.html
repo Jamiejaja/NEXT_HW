@@ -27,8 +27,9 @@
     justify-content: space-evenly;
     align-items: center;
     color: white;
-    background-color: cadetblue;>
-    <a href="{% url 'home' %}">HOME</a>
+    background-color: cadetblue;">
+
+    <a href="{% url 'home' %}">TO DO</a>
     {% if user.is_authenticated %}
     <a>안녕하세요, {{ user.username }}님</a>
     <a href="{% url 'logout' %}">로그아웃</a>
